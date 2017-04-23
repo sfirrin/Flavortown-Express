@@ -1,0 +1,28 @@
+
+img.guy-fieri {
+    position: fixed;
+    z-index: 9999999999999;
+    top: 0;
+    display: none;
+    right: -99999;
+    height: 100%;
+    width: auto;
+    bottom: 0;
+}
+
+img.little-guy {
+    position: fixed;
+    z-index: 9999999999999;
+    top: -300px;
+    left: -400px;
+    width: auto;
+    background: none !important;
+}
+
+img.grill-guy {
+    position: fixed;
+    z-index: 9999999999999;
+    left: 0;
+    bottom: -600;
+    width: auto;
+}
