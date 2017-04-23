@@ -25,15 +25,9 @@ function main(clickCount, url) {
 	if (clickCount < 3) {
 		return
 	}
-	var grillGuyRemainder = clickCount % grillGuyMultiple 
-	switch (grillGuyRemainder) {
-		case 0:
-		case 1:
-		case 2:
-			slideGrillGuyIn()
-			break
-		default:
-			break
+	var grillGuyRemainder = clickCount % grillGuyMultiple
+	if (grillGuyRemainder < 3) {
+		slideGrillGuyIn()
 	}
 	
 }
@@ -64,14 +58,16 @@ function startLittleGuy(url) {
 	
 	var timeline = new TimelineMax()
 	
+	var animationTime = 3.5 + Math.random() / 2
+	
 	$littleGuy.on('load', function() {
-		timeline.staggerTo($littleGuy, 4, { bezier: {
+		timeline.to($littleGuy, animationTime, { bezier: {
 			type: 'soft',
 			values: bezier_path,
 			curviness: 1,
 			autoRotate: true,
 			parseTransform:true
-		}, ease: Power1.easeOut })
+		}, ease: Power1.easeOut})
 	})
 	
 	setTimeout(function() {

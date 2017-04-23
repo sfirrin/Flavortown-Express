@@ -2,7 +2,7 @@
 	"name": "Flavortown Express",
 	"manifest_version": 2,
 	"description": "Inject some flavor into your web browsing",
-	"version": "0.2",
+	"version": "1.1.0",
 	"background": {
 		"scripts": ["background.js"],
 		"persistent": false
